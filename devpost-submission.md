@@ -1,6 +1,6 @@
 # EvidenceGate: tests pass, but the refactor changes meaning
 
-Status: draft, not ready for final submission until actual GitLab Duo and CI runs are recorded. Target: Life After Code / Path A / Supervised Automation. Public source: https://github.com/KD-code-99/evidencegate (verify after publication). Required public GitLab project and live Duo session: pending approved project access. Public video: pending; media/demo-narrated.mp4 demonstrates local software only.
+Status: draft, not ready for final submission until actual GitLab Duo and CI runs are recorded. Target: Life After Code / Path A / Supervised Automation. Public source: https://github.com/KD-code-99/evidencegate. Required public GitLab project and live Duo session: pending approved project access. Public video: pending; media/demo-narrated.mp4 demonstrates local software only.
 
 ## The problem
 
