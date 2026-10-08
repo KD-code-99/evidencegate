@@ -1,0 +1,18 @@
+test_equivalence_is_symbolic_and_not_a_sample_claim (test_contracts.IndependentContractTests.test_equivalence_is_symbolic_and_not_a_sample_claim) ... ok
+test_modified_receipt_cannot_unlock_release (test_contracts.IndependentContractTests.test_modified_receipt_cannot_unlock_release) ... ok
+test_receipt_replay_binds_the_source (test_contracts.IndependentContractTests.test_receipt_replay_binds_the_source) ... ok
+test_rejects_float_semantics_calls_and_conditionals (test_contracts.IndependentContractTests.test_rejects_float_semantics_calls_and_conditionals) ... ok
+test_source_extraction_rejects_additional_effects (test_contracts.IndependentContractTests.test_source_extraction_rejects_additional_effects) ... ok
+test_wrong_refactor_has_independent_witness (test_contracts.IndependentContractTests.test_wrong_refactor_has_independent_witness) ... ok
+test_zero_shipping_examples (test_contracts.OrdinaryApplicationTests.test_zero_shipping_examples) ... ok
+test_equivalent_change_packages_and_changed_source_invalidates_evidence (test_demo.DemoTests.test_equivalent_change_packages_and_changed_source_invalidates_evidence) ... ok
+test_http_uses_actual_check_and_rejects_cross_origin (test_demo.DemoTests.test_http_uses_actual_check_and_rejects_cross_origin) ... ok
+test_unknown_program_blocks_instead_of_claiming_correctness (test_demo.DemoTests.test_unknown_program_blocks_instead_of_claiming_correctness) ... ok
+test_wrong_change_passes_examples_but_blocks_real_package (test_demo.DemoTests.test_wrong_change_passes_examples_but_blocks_real_package) ... ok
+test_actual_zip_http_canaries_and_drift_gate (test_staging.StagingTests.test_actual_zip_http_canaries_and_drift_gate) ... ok
+test_wrong_source_never_starts_staging (test_staging.StagingTests.test_wrong_source_never_starts_staging) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 5.826s
+
+OK

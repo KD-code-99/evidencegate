@@ -1,0 +1,50 @@
+image: python:3.12-slim
+stages: [test, verify, package, staging, release]
+
+ordinary_and_checker_tests:
+  stage: test
+  script:
+    - python -B -m unittest discover -s tests -v
+
+exact_contract:
+  stage: verify
+  script:
+    - python -B -m evidencegate audit --out artifacts/contract.json
+  artifacts:
+    when: always
+    paths: [artifacts/contract.json]
+    expire_in: 30 days
+
+verified_package:
+  stage: package
+  needs:
+    - job: exact_contract
+      artifacts: true
+  script:
+    - python -B -m evidencegate package --receipt artifacts/contract.json
+  artifacts:
+    paths: [artifacts/contract.json, artifacts/verified-billing.zip]
+    expire_in: 30 days
+
+staging_canaries_and_drift:
+  stage: staging
+  needs:
+    - job: verified_package
+      artifacts: true
+  script:
+    - python -B -m evidencegate staging --receipt artifacts/contract.json --out artifacts/staging.json
+  artifacts:
+    paths: [artifacts/staging.json, artifacts/verified-billing.zip, artifacts/contract.json]
+    expire_in: 30 days
+
+supervised_release:
+  stage: release
+  when: manual
+  allow_failure: false
+  needs:
+    - job: staging_canaries_and_drift
+      artifacts: true
+  script:
+    - python -B -m evidencegate release --receipt artifacts/contract.json
+  artifacts:
+    paths: [artifacts/verified-billing.zip]

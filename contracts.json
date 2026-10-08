@@ -1,0 +1,9 @@
+{
+  "domain": "integers",
+  "functions": [{
+    "file": "sampleapp/billing.py",
+    "function": "invoice_total",
+    "variables": ["units", "unit_price", "shipping"],
+    "expected": "units * unit_price + shipping"
+  }]
+}

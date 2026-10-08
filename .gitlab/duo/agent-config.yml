@@ -1,0 +1,4 @@
+# Use GitLab's default Agent Platform image, which includes the sandbox runtime.
+# The ordinary CI jobs independently use python:3.12-slim.
+setup_script: |
+  python3.12 --version

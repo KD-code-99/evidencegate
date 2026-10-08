@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "evidencegate"
+version = "0.1.0"
+description = "Exact arithmetic contracts and replayable evidence for supervised GitLab releases"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+dependencies = []
+[tool.setuptools.packages.find]
+include = ["evidencegate*", "sampleapp*"]
